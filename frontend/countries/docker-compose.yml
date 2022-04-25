@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: frontend
+    volumes:
+      - ./:/var/www/client
+    ports:
+      - 4200:4200
